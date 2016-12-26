@@ -15,16 +15,16 @@
 					console.log('My Todos: ', todos.todoList);
 				},
 				addTodo: function(todo) {
-					todos.todoList.push(todo);
-					todos.displayTodos();
+					this.todoList.push(todo);
+					this.displayTodos();
 				},
 				changeTodo: function(position, todo) {
-					todos.todoList[position] = todo;
-					todos.displayTodos();
+					this.todoList[position] = todo;
+					this.displayTodos();
 				},
-				deleteTodo: function(position, numberToDelete) {
-					todos.todoList.splice(position, numberToDelete);
-					todos.displayTodos();
+				deleteTodo: function(position) {
+					this.todoList.splice(position, 1);
+					this.displayTodos();
 				}
 			}
 
