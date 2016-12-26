@@ -1,0 +1,66 @@
+<html>
+	<head>
+		
+	</head>
+	<body>
+		<script>
+
+		// objects - convert all the functions to methods onthe todos object
+		
+
+
+			var todos = {
+				todoList: ['thing1', 'thing2', 'thing3'],
+				displayTodos: function() {
+					console.log('My Todos: ', todos.todoList);
+				},
+				addTodo: function(todo) {
+					todos.todoList.push(todo);
+					todos.displayTodos();
+				},
+				changeTodo: function(position, todo) {
+					todos.todoList[position] = todo;
+					todos.displayTodos();
+				},
+				deleteTodo: function(position, numberToDelete) {
+					todos.todoList.splice(position, numberToDelete);
+					todos.displayTodos();
+				}
+			}
+
+
+
+		
+
+
+			// Make an array, need data to work with
+			//var todos = ['thing1', 'thing2', 'thing3'];
+
+			// It should have a function to display todos
+			// function displayTodos() {
+			// 	console.log('My Todos: ', todos);
+			// }
+
+			// It should have a function to add new todos
+			// function addTodo(todo) {
+			// 	todos.push(todo);
+			// 	displayTodos();
+			// }
+
+			// // It should have a function to change a todo
+			// function changeTodo(position, todo) {
+			// 	todos[position] = todo;
+			// 	displayTodos();
+			// }
+
+			// // It should have a function to delete a todo
+			// function deleteTodo(position) {
+			// 	todos.splice(position, 1);
+			// 	displayTodos();
+			// }
+
+
+
+		</script>
+	</body>
+</html>

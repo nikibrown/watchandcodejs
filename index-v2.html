@@ -4,26 +4,29 @@
 	</head>
 	<body>
 		<script>
+
+			// Make an array, need data to work with
 			var todos = ['thing1', 'thing2', 'thing3'];
 
-			// it should have a function to display todos
+			// It should have a function to display todos
 			function displayTodos() {
 				console.log('My Todos: ', todos);
 			}
 
 			// It should have a function to add new todos
-			function addTodos(todo) {
+			function addTodo(todo) {
 				todos.push(todo);
 				displayTodos();
 			}
 
 			// It should have a function to change a todo
-			function changeTodos(position, todo) {
+			function changeTodo(position, todo) {
 				todos[position] = todo;
 				displayTodos();
 			}
 
-			function deleteTodos(position) {
+			// It should have a function to delete a todo
+			function deleteTodo(position) {
 				todos.splice(position, 1);
 				displayTodos();
 			}
