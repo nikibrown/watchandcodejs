@@ -15,6 +15,12 @@
 			<input type="text" id="addTodoTextInput">
 			<button onclick="handlers.addTodo()">Add</button>
 		</div>
+
+		<div>
+			<input type="number" id="changeTodoPositionInput">
+			<input type="text" id="changeTodoTextInput">
+			<button onclick="handlers.changeTodo();">Change Todo</button>
+		</div>
 		
 
 		<ul id="htmlList">
@@ -144,7 +150,15 @@
 					var addTodoTextInput = document.getElementById('addTodoTextInput');
 					todoList.addTodo(addTodoTextInput.value);
 					 addTodoTextInput.value = '';
+				},
+				changeTodo: function() {
+					var changeTodoPositionInput = document.getElementById('changeTodoPositionInput');
+					var changeTodoTextInput = document.getElementById('changeTodoTextInput');
+					todoList.changeTodo(changeTodoPositionInput.valueAsNumber, changeTodoTextInput.value );
+					changeTodoPositionInput.value = '';
+					changeTodoTextInput.value = '';
 				}
+
 			}
 
 			
