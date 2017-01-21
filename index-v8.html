@@ -26,6 +26,11 @@
 			<input type="number" id="deleteTodoPositionInput">
 			<button onclick="handlers.deleteTodo();">Delete Todo</button>
 		</div>
+
+		<div>
+			<input type="number" id="toggleCompletedPositionInput">
+			<button onclick="handlers.toggleCompleted()">Toggle Completed</button>
+		</div>
 		
 
 		<ul id="htmlList">
@@ -101,7 +106,6 @@
 					this.displayTodos();
 				},
 				toggleAll: function() {
-
 					var totalTodos = this.todos.length;
 					var completedTodos = 0;
 
@@ -148,9 +152,6 @@
 				displayTodos: function() {
 					todoList.displayTodos();
 				},
-				toggleAll: function() {
-					todoList.toggleAll();
-				},
 				addTodo: function() {
 					var addTodoTextInput = document.getElementById('addTodoTextInput');
 					todoList.addTodo(addTodoTextInput.value);
@@ -167,12 +168,16 @@
 					var deleteTodoPositionInput = document.getElementById('deleteTodoPositionInput');
 					todoList.deleteTodo(deleteTodoPositionInput.valueAsNumber);
 					deleteTodoPositionInput.value = '';
+				},
+				toggleCompleted: function() {
+					var toggleCompletedPositionInput = document.getElementById('toggleCompletedPositionInput');
+					todoList.toggleCompleted(toggleCompletedPositionInput.valueAsNumber);
+					toggleCompletedPositionInput.value = '';
+				},
+				toggleAll: function() {
+					todoList.toggleAll();
 				}
-
-
 			}
-
-		
 		</script>
 	</body>
 </html>
