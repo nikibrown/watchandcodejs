@@ -34,11 +34,7 @@
 
 		<script>
 
-		// Version 8 - Refactoring and getting data from inputs
-
-		// Js is at bottom of page to interact with the DOM elements. HTML has to load first (use window.load or document.ready)
-
-			var todoList = {
+			var todoList = { // represents data as array, and methods that change the data
 				todos: [
 							{
 								todoText: "thing1",
@@ -90,29 +86,7 @@
 			}
 
 
-			
-
-			// 1. get access to display todos btn
-			var displayTodosButton = document.getElementById("displayTodosButton");
-			var toggleAllButton = document.getElementById("toggleAllButton");
-
-			
-			var htmlList = document.getElementById("htmlList");
-
-			// 2. run displayTodos method when someone clicks the display button
-
-			
-			// displayTodosButton.addEventListener('click', function() {
-			// 	todoList.displayTodos();
-			// });
-
-			// toggleAllButton.addEventListener('click', function() {
-			// 	todoList.toggleAll();
-			// });
-
-
-
-			var handlers = { // handles user interactions
+			var handlers = { // handles user interactions - click a button - corresponding handler
 				addTodo: function() {
 					var addTodoTextInput = document.getElementById('addTodoTextInput');
 					todoList.addTodo(addTodoTextInput.value);
